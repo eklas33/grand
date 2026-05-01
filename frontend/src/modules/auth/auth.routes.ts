@@ -1,0 +1,50 @@
+import Login from './pages/Login.vue'
+import Register from './pages/Register.vue'
+import ForgotPassword from './pages/ForgotPassword.vue'
+import Support from './pages/Support.vue'
+import PrivacyPolicy from './pages/PrivacyPolicy.vue'
+import TermsOfService from './pages/TermsOfService.vue'
+
+const authRoutes = [
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login,
+    meta: { layout: 'AuthLayout' }
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register,
+    meta: { layout: 'AuthLayout' }
+  },
+  {
+    path: '/forgot-password',
+    component: ForgotPassword,
+    meta: { layout: 'AuthLayout' }
+  },
+  {
+    path: '/support',
+    name: 'Support',
+    component: Support,
+    meta: { layout: 'AuthLayout' }
+  },
+  {
+    path: '/register/success',
+    name: 'RegistrationSuccess',
+    component: () => import('./pages/RegistrationSuccess.vue'),
+    meta: { layout: 'AuthLayout' }
+  },
+  {
+    path: '/privacy',
+    component: PrivacyPolicy,
+    meta: { layout: 'AuthLayout' }
+  },
+  {
+    path: '/terms',
+    component: TermsOfService,
+    meta: { layout: 'AuthLayout' }
+  }
+]
+
+export default authRoutes
