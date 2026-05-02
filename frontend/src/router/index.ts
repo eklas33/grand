@@ -15,6 +15,11 @@ import About from '@/pages/About.vue'
 import Projects from '@/pages/Projects.vue'
 import News from '@/pages/News.vue'
 import GetInvolved from '@/pages/GetInvolved.vue'
+import Events from '@/pages/Events.vue'
+import SupportUs from '@/pages/SupportUs.vue'
+import PrivacyPolicy from '@/pages/PrivacyPolicy.vue'
+import TermsOfUse from '@/pages/TermsOfUse.vue'
+import ContactUs from '@/pages/ContactUs.vue'
 
 const routes = [
   {
@@ -45,6 +50,36 @@ const routes = [
     path: '/get-involved',
     name: 'GetInvolved',
     component: GetInvolved,
+    meta: { layout: 'MainLayout' }
+  },
+  {
+    path: '/events',
+    name: 'Events',
+    component: Events,
+    meta: { layout: 'MainLayout' }
+  },
+  {
+    path: '/support-us',
+    name: 'SupportUs',
+    component: SupportUs,
+    meta: { layout: 'MainLayout' }
+  },
+  {
+    path: '/privacy-policy',
+    name: 'PrivacyPolicy',
+    component: PrivacyPolicy,
+    meta: { layout: 'MainLayout' }
+  },
+  {
+    path: '/terms-of-use',
+    name: 'TermsOfUse',
+    component: TermsOfUse,
+    meta: { layout: 'MainLayout' }
+  },
+  {
+    path: '/contact-us',
+    name: 'ContactUs',
+    component: ContactUs,
     meta: { layout: 'MainLayout' }
   },
   ...authRoutes,
